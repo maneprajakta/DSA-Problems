@@ -1,2 +1,6 @@
 1.Fraction To Decimal (To Do)
-2.
+2.Print anagrams together.
+3.Nuts and Bolts Problem.
+4.Subarray with equal 1's and 0's.
+5.Longest consecutive subsequence.
+6.Longest subarray with sum k.
