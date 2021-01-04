@@ -67,6 +67,21 @@ bool isPowerofTwo(long long n){
     return !(n&(n-1));
 }
 
-    
-    
+// Find position of set bit 
+
+ bool isPowerOf2(int n)
+    {
+        if(n==0)
+        return false;
+        
+        return (!(n&(n-1)));
+    }
+  
+    int findPosition(int n) {
+        // code here
+       if(isPowerOf2(n))
+       return ceil(log2(n))+1;
+       else
+       return -1;
+    }
     
