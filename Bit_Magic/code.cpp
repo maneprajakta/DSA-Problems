@@ -60,6 +60,12 @@ int maxConsecutiveOnes(int x)
     return count;    
 }
 
+// is power of 2
+bool isPowerofTwo(long long n){
+    
+    // Your code here    
+    return !(n&(n-1));
+}
 
     
     
