@@ -2,6 +2,7 @@
 8-jan-laptop-not-opening
 12-jan-laptop-not-opening
 16-jan-critical-laptopalert 
+17-jan-laptop band pura
 To improve 
 
 ## Algorithms:
