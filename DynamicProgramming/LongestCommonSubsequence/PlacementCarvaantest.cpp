@@ -3,57 +3,17 @@
 
 #include<bits/stdc++.h>
 using namespace std;
-int longestCommonSubsequence(string text1, string text2) {
-       int m = text1.length();
-       int n = text2.length();
-       int dp[m+1][n+1];
-       
-       for(int i=0;i<m+1;i++)
-       {
-           for(int j=0;j<n+1;j++)
-               if(i==0 || j==0)
-                   dp[i][j]=0;
-        }
-        for(int i=1;i<m+1;i++)
-        {
-            for(int j=1;j<n+1;j++)
-            {
-                if(text1[i-1]==text2[j-1])
-                    dp[i][j]=1+dp[i-1][j-1];
-                else
-                    dp[i][j]=max(dp[i-1][j],dp[i][j-1]);
-            }
-        }
-        return dp[m][n];
-    }
-int main()
-{
-    string s1,s2,s;
-    cin>>s1>>s2>>s;
-    int m = longestCommonSubsequence(s1,s);
-    int n = longestCommonSubsequence(s2,s);
-     if(m>=n)
-     cout<<"WIN"<<endl;
-     else
-     cout<<"LOSE"; 
-    return 0;
-}
-
-//second approach
-
-#include<bits/stdc++.h>
-using namespace std;
 int Common(string text1, string text2) {
        map<char,int>mp;
        int c=0;
        for(auto x:text2)
-       {
-           mp[x]=0;
+       {  
+            mp[x]++;
        }
        for(auto x:text1)
        {
            if(mp.find(x)!=mp.end())
-           c++;
+           c=c+mp[x];
        }
         return c;
     }
@@ -63,7 +23,7 @@ int main()
     cin>>s1>>s2>>s;
     int m = Common(s1,s);
     int n = Common(s2,s);
-     if(m>=n)
+     if(m>n)
      cout<<"WIN"<<endl;
      else
      cout<<"LOSE"<<endl; 
@@ -101,16 +61,18 @@ int main()
 }
    
    // experiment of chef
+  
+     
     #include<bits/stdc++.h>
     using namespace std;
      
-     int maxProduct(int nums[] ,int size) {
+     int maxProduct(long long int nums[] ,int size) {
        
-        int res = nums[0], cur_min = nums[0], cur_max = nums[0];
+        long long int res = nums[0], cur_min = nums[0], cur_max = nums[0];
         
         for(int i = 1;i < size;i++ )
         {
-            int next_min,next_max;
+            long long int next_min,next_max;
             cur_min = cur_min * nums[i];
             cur_max = cur_max * nums[i];
             
@@ -128,53 +90,25 @@ int main()
     	
     	int n;
     	cin>>n;
-    	int nums[n];
+    	long long int nums[n];
     	for(int i=0;i<n;i++)
     	cin>>nums[i];
-    	cout<<maxProduct(nums,n)<<endl;
+    	cout<<maxProduct(nums,n);
     	return 0;
     }
      
    
    //new dish
-   
 #include<bits/stdc++.h>
 using namespace std;
 
 bool ifpossible(string s,string u) {
         
-        int n = s.length();
-        int ind1 = 0;
-        int ind2 = 0;
-        int flag=1;
-        for(int i =0;i<n;i++)
-        {
-            for(int j=0;j<n;j++)
-            {
-                if(s[i]==u[j])
-                {
-                    ind1 = i;
-                    ind2 = j;
-                }
-            }
-        }
-        int c=0;
-        while(c<=n)
-        {
-            if(s[ind1]==u[ind2])
-            {
-                ind1 = (ind1+1)%n;
-                ind2 = (ind2+1)%n;
-                c++;
-            }
-            else{
-                flag=0;
-                break;
-            }
-        }
-        if(flag==0)
-        return false;
-    return true;
+    if(s.length()!=u.length())
+    return false;
+    
+    string combine = s + s;
+    return (combine.find(u)!=string::npos);
     }
 
 int main() {
@@ -183,7 +117,7 @@ int main() {
 	cin>>t;
 	while(t--)
 	{
-    string s,u;
+        string s,u;
 	cin>>s>>u;
 	if(ifpossible(s,u))
 	cout<<"YES"<<endl;
@@ -191,4 +125,85 @@ int main() {
 	cout<<"NO"<<endl;
 	}
 	return 0;
-}
+}   
+
+
+
+#python
+#game of string
+# cook your dish here
+def common(s1,s):
+    dic = {};
+    c=0
+    for x in s:
+        if x in dic.keys():
+            dic[x] = dic[x]+1
+        else:
+            dic[x]=1
+    for x in s1:
+        if x in dic.keys():
+            c = c+dic[x]
+    return c
+    
+s1 = input()
+s2 = input()
+s = input()
+m = common(s1,s)
+n = common(s2,s)
+if m>n:
+   print("WIN")
+else:
+   print("LOSE")
+	   
+#help baby chef
+t = int(input())
+for x in range(0,t):
+    size = int(input())
+    arr = map(int,input().split())
+    c = 1
+    sumn =0
+    for x in arr:
+        sumn +=x
+        print(sumn//c,end=" ")
+        c=c+1
+    print()
+	 
+#NEW DISH
+def ifpossible(s,u):
+    if len(s)!=len(u):
+        return False
+    combine = s+s
+    if combine.count(u)>0:
+        return True
+    else:
+        return False
+    
+t = int(input())
+for x in range(0,t):
+    s = input()
+    u = input()
+    if ifpossible(s,u):
+        print("YES")
+    else:
+        print("NO")
+	      
+#maximum product subarray
+def maxProduct(arr,size):
+    res = arr[0]
+    cur_min = arr[0]
+    cur_max = arr[0]
+    for i in range(1,size):
+        cur_min = cur_min * arr[i]
+        cur_max = cur_max * arr[i]
+        
+        next_min = min(cur_min,min(cur_max,arr[i]))
+        next_max = max(cur_min,max(cur_max,arr[i]))
+        cur_min = next_min
+        cur_max = next_max
+        if cur_max >res:
+            res = cur_max
+    return res
+    
+size = int(input())
+arr = list(map(int,input().split()))
+print(maxProduct(arr,size))
