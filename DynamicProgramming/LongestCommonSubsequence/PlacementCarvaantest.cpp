@@ -130,8 +130,8 @@ int main() {
 
 
 #python
-#game of string
-# cook your dish here
+
+###### --------------------------------- game of string
 def common(s1,s):
     dic = {};
     c=0
@@ -155,7 +155,7 @@ if m>n:
 else:
    print("LOSE")
 	   
-#help baby chef
+###### --------------------------------  help baby chef
 t = int(input())
 for x in range(0,t):
     size = int(input())
@@ -167,27 +167,42 @@ for x in range(0,t):
         print(sumn//c,end=" ")
         c=c+1
     print()
-	 
-#NEW DISH
+	      
+##### ------------------------------------ maximum money 
+t = int(input())
+for x in range(0,t):
+    n = int(input())
+    arr = list(map(int,input().split()))
+    m = int(input())
+    i = 0
+    j = m-1
+    maxn = float("inf")
+    arr.sort()
+    while j<n:
+        if (arr[j]-arr[i]<maxn):
+            maxn = arr[j]-arr[i]
+        j=j+1
+        i=i+1
+    print(maxn)
+	      
+##### --------------------------------- NEW DISH(wrong answer)
 def ifpossible(s,u):
     if len(s)!=len(u):
-        return False
+        return "NO"
+    combine = ''
     combine = s+s
     if combine.count(u)>0:
-        return True
+        return "YES"
     else:
-        return False
+        return "NO"
     
 t = int(input())
 for x in range(0,t):
     s = input()
     u = input()
-    if ifpossible(s,u):
-        print("YES")
-    else:
-        print("NO")
+    print(ifpossible(s,u))
 	      
-#maximum product subarray
+#--------------------------------------   MAX-PRODUCT(runtime error )
 def maxProduct(arr,size):
     res = arr[0]
     cur_min = arr[0]
@@ -206,4 +221,4 @@ def maxProduct(arr,size):
     
 size = int(input())
 arr = list(map(int,input().split()))
-print(maxProduct(arr,size))
+print(maxProduct(arr,size)) 
