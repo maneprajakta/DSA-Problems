@@ -3,6 +3,7 @@
 12-jan-laptop-not-opening
 16-jan-critical-laptopalert 
 17-jan-laptop band pura
+22-jan-phone-display-gone
 To improve 
 
 ## Algorithms:
