@@ -69,7 +69,7 @@ for x in range(0,t):
     u = input()
     print(ifpossible(s,u))
 	      
-#--------------------------------------   MAX-PRODUCT(runtime error )
+#--------------------------------------   MAX-PRODUCT(runtime error ) --- 
 def maxProduct(arr,size):
     res = arr[0]
     cur_min = arr[0]
