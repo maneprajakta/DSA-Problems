@@ -26,3 +26,4 @@ Best Case :(Omega Notation) 0 <= c*g(n) <= f(n)
 ## Data Structure :
 1. Array
 2. String
+3. Heap
