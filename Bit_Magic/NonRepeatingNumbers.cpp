@@ -1,5 +1,6 @@
 /*
 link:https://practice.geeksforgeeks.org/problems/finding-the-numbers0215/1#
+tutorial:https://algorithms.tutorialhorizon.com/find-two-non-repeating-numbers-in-an-array-in-on-time-and-o1-space/
 
 Given an array A containing 2*N+2 positive numbers, out of which 2*N numbers exist in pairs whereas the other two number occur exactly once and are distinct.
 Find the other two numbers.
