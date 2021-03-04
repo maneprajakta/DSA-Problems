@@ -23,3 +23,33 @@ Given a connected undirected graph. Perform a Depth First Traversal of the graph
 	    return ans;
 	}
 
+/* iterative */
+
+vector<int>dfs(int V, vector<int> adj[]){
+	    
+  stack<int>s;
+  vector<int>ans;
+  vector<bool>visited(V,false);
+  
+  s.push(0);
+  int flag=0;
+  ans.push_back(s.top());
+  while(!s.empty())
+  {
+     flag=0;
+     for(auto x:adj[s.top()])
+     {
+        if(visited[x]==false)
+        {
+           s.push(x);
+           ans.push_back(x);
+           flag=1;
+           visited[x]=true;
+           break;
+        }
+     }
+     if(flag==0)
+       s.pop();
+  }
+  return ans;
+  }
