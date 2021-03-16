@@ -1,6 +1,8 @@
 /*
 link : https://practice.geeksforgeeks.org/problems/strongly-connected-components-kosarajus-algo/1#
 
+link : https://ideone.com/9MPtJm
+
 Given a Directed Graph with V vertices and E edges, Find the number of strongly connected components in the graph.
 */
 
