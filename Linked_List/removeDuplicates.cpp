@@ -14,33 +14,20 @@ than 1 time.
 
 */
 
-class Solution {
-public:
-    ListNode *detectCycle(ListNode *head) {
-        
-        if (head == NULL || head->next == NULL)
-        return NULL;
-        
-        ListNode *first = head;
-        ListNode *second=head;
-        
-        while(first && second && second->next)
-        {
-            first=first->next;
-            second=second->next->next;
-            if(first==second)
-                break;
-        }
-        if(first!=second)
-            return NULL;
-        
-        first=head;
-        while(first!=second)
-        {
-            first=first->next;
-            second=second->next;
-        }
-        return first;
-        
-    }
-};
+Node *removeDuplicates(Node *head)
+{
+ // your code goes here
+   if(head==NULL || head->next==NULL)
+   return head;
+   
+   Node*curr = head;
+   
+   while(curr->next!=NULL)
+   {
+       if(curr->data == curr->next->data)
+       curr->next=curr->next->next;
+       else
+       curr=curr->next;
+   }
+   return head;
+}
