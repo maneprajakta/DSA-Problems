@@ -1,13 +1,5 @@
 # Practise (Hope)
-8-jan-laptop-not-opening
-<br>12-jan-laptop-not-opening
-<br>16-jan-critical-laptopalert 
-<br>17-jan-laptop band pura
-<br>22-jan-phone-display-gone
-<br>19-feb-gfg
-<br>tcs Exam though
-To improve  ...
-learn
+
 ## Algorithms:
 -----
 
@@ -29,4 +21,4 @@ Best Case :(Omega Notation) 0 <= c*g(n) <= f(n)
 1. Array
 2. String
 3. Heap
-4.Linked List
+4. Linked List
