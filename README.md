@@ -1,4 +1,4 @@
-# Practise (Hope)
+# Practise 🧑‍🚀
 
 ## Algorithms:
 -----
