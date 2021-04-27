@@ -1,4 +1,4 @@
-# Practise 🧑‍🚀
+# Practise 
 
 ## Algorithms:
 -----
