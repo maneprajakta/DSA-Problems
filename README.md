@@ -22,3 +22,4 @@ Best Case :(Omega Notation) 0 <= c*g(n) <= f(n)
 2. String
 3. Heap
 4. Linked List
+5. Treee
