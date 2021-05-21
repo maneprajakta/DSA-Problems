@@ -16,7 +16,7 @@ Average Case : (theta Notation) 0 <= c1*g(n) <= f(n) <= c2*g(n)
 Best Case :(Omega Notation) 0 <= c*g(n) <= f(n) 
 
 ---
-
+0000000000000000
 ## Data Structure :
 1. Array
 2. String
