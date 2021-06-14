@@ -1,5 +1,6 @@
 /*
-
+Link:https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/
+tc : O(v+Elog(v))
 input:
 6 9
 1 2 4
@@ -47,7 +48,7 @@ while(!pq.empty())
    pq.pop();
    
    for(auto edge:adj[curr])
-   {
+   {  //d(u)+w<dd(v)
      if(curr_d+edge.second < dist[edge.first])
      {
         dist[edge.first]=curr_d+edge.second;
