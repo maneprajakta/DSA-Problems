@@ -16,7 +16,7 @@ pair<int,int> find_maxmin(int arr[],int size)
    // if size is even    
     if(size%2==0)
     {
-        if(arr[0]>arr[1])
+        if(arr[0]>arr[1])  
         {min=arr[1];
          max=arr[0];
         }
@@ -33,11 +33,11 @@ pair<int,int> find_maxmin(int arr[],int size)
     }
     for(int i=start;i<size;i=i+2)
     {
-        if(arr[i]>arr[i+1])
+        if(arr[i]>arr[i+1])    // first comparison
         {
-            if(arr[i]>max)
+            if(arr[i]>max)     // second comparison
             max=arr[i];
-            if(arr[i+1]<min)
+            if(arr[i+1]<min)    // third comparison
             {
                 min=arr[i+1];
             }
