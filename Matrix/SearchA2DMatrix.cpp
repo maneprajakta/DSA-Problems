@@ -1,5 +1,9 @@
 /*
 link : https://leetcode.com/problems/search-a-2d-matrix/
+Approach : take corner element as mid;
+now if element>target then move left j-- as below all element would be greater.
+if element<target then i++ move down as value increases down it's sorted.
+
 
 Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:
 
