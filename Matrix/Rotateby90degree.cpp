@@ -3,6 +3,8 @@ link:https://practice.geeksforgeeks.org/problems/rotate-by-90-degree-1587115621/
 
 Given a square matrix[][] of size N x N. The task is to rotate it by 90 degrees in an anti-clockwise direction without using any extra space.
 
+first reverse every row then transpose of matrix 
+
 Example 1:
 
 Input:
