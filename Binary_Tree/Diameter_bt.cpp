@@ -1,3 +1,19 @@
+/*
+Link:https://practice.geeksforgeeks.org/problems/diameter-of-binary-tree/1
+Diameter of Binary Tree 
+Easy Accuracy: 50.01% Submissions: 100k+ Points: 2
+Given a Binary Tree, find diameter of it.
+The diameter of a tree is the number of nodes on the longest path between two end nodes in the tree.
+The diagram below shows two trees each with diameter nine, the leaves that form the ends of a longest path are shaded 
+(note that there is more than one path in each tree of length nine, but no path longer than nine nodes).
+
+
+    Two conditions:
+     If diameter goes through root node the dia=1+lh+rh;
+     else dl+dr;
+
+*/
+
 int height(Node*root)
 {
     if(!root)
