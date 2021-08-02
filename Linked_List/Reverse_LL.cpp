@@ -33,7 +33,7 @@ struct Node* reverseList(struct Node *head)
     return head;
 }
 
-// iterative 
+// recursive 
 
 struct Node* reverseList(struct Node *head)
 {
