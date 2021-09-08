@@ -28,3 +28,5 @@ There are sqrt(n) Perfect Squares between 1 and n.
 3. Heap
 4. Linked List
 5. Tree
+
+Okay I cracked Accolite with this
