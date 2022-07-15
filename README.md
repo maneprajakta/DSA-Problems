@@ -9,9 +9,7 @@ Such large inputs are never given to software and an algorithm which is asymptot
 
 
 Worst Case : (Big O Notaion) 0 <= f(n) <= c*g(n)
-
 Average Case : (theta Notation) 0 <= c1*g(n) <= f(n) <= c2*g(n)
-
 Best Case :(Omega Notation) 0 <= c*g(n) <= f(n) 
 
 
