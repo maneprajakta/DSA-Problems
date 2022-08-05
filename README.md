@@ -6,10 +6,9 @@ Asymptotic Analysis, we evaluate the performance of an algorithm in terms of inp
 Such large inputs are never given to software and an algorithm which is asymptotically slower, always performs better for particular situation.
 
 **Analysis of Algorithm** :
-
-
 Worst Case : (Big O Notaion) 0 <= f(n) <= c*g(n)
 Average Case : (theta Notation) 0 <= c1*g(n) <= f(n) <= c2*g(n)
 Best Case :(Omega Notation) 0 <= c*g(n) <= f(n) 
+
 
 
